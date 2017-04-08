@@ -1,0 +1,25 @@
+                      OO 
+         OOOOOO      OOOO
+        OO    OO     OOOO
+     OOOOOO    OO   OOOOO
+    OOOOOOOO    O   OOOO 
+     OOO   OOO  O  OOOOO 
+       OO O  OO O  OOOO  
+OOOOOO O     OOOO OOOO  O
+       O      OO  OOO    
+OOOO    O   O OO OOOO OOO
+         OOO  O  OOO     
+OO  OOOOOO   OOOOOO  OOOO
+   OO   O   O   OOOO     
+  OO     OOO   OOO OO    
+ OO   O       OOO    O   
+ O    O     OOOOO  OOOO  
+OOO  O     OO  O  O    O 
+O  OOO     O    OO     O 
+O   OOOOOOOOOO        OO 
+O            OOOOOOOOOO  
+OO            O OO       
+ OOOOOOOOOOO  O O        
+    O     OOOO OO        
+     O   OOO   O         
+     O   OO    O         
