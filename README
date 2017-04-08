@@ -1,0 +1,5 @@
+solves Japanese Mosaic Puzzles. the puzzle file needs to be in the src folder. 
+If there is an error in the puzzle description, it could run indefinitely.
+
+The solved puzzle will only show areas to paint. 
+For easier navigation, it will print a number instead of 'O', if the number is also painted.
