@@ -1,15 +1,15 @@
-  O         1  
+  X         1  
      3   3     
-1   3 3 3 O  1 
+1   3 3 3 X  1 
      5   5     
-  1 3 3 3 3 O  
+  1 3 3 3 3 X  
     3 3 3 3    
     5 5 5 5    
-   OO5OOOO44   
-  3         O  
+   XX5XXXX44   
+  3         X  
   3         3  
-  O 33O  3O O  
-  OO   3O  5O  
-  O         6  
-OOO7OOOO6OOO7OO
- 56OO6OO6O6O65 
+  X 33X  3X X  
+  XX   3X  5X  
+  X         6  
+XXX7XXXX6XXX7XX
+ 56XX6XX6X6X65 

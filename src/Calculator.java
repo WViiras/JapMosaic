@@ -99,7 +99,8 @@ public class Calculator {
                     }
 
                     if (Character.isDigit(c)) {
-                        combinator(col, row);
+                        doMagic(col, row);
+                        //                        combinator(col, row);
                     }
 
 
@@ -125,7 +126,7 @@ public class Calculator {
                     char nM = numberMatrix2[i][j];
                     char pM = paintMatrix[i][j];
 
-                    if (pM == PAINT && Character.isDigit(nM)) {
+                    if (pM == STRIKE && Character.isDigit(nM)) {
                         fw.write(nM);
                     } else {
                         fw.write(pM);
@@ -145,42 +146,11 @@ public class Calculator {
                 char c = paintMatrix[i][j];
                 if (c == STRIKE) {
                     paintMatrix[i][j] = ' ';
+                }else {
+                    paintMatrix[i][j] = STRIKE;
                 }
             }
         }
-    }
-
-    private void combinator(int col, int row) {
-        int c = Character.getNumericValue(numberMatrix[row][col]);
-
-        switch (c) {
-            case 0:
-                strikeSurround(col, row);
-                break;
-            default:
-                doMagic(col, row);
-                break;
-        }
-    }
-
-    private void strikeSurround(int cCol, int cRow) {
-        for (int row = cRow - 1; row < cRow + 2; row++) {
-            for (int col = cCol - 1; col < cCol + 2; col++) {
-                if (isInsideMatrix(col, row)) {
-                    char nM = numberMatrix[row][col];
-                    char pM = paintMatrix[row][col];
-                    if ((nM == FILL || Character.isDigit(nM)) && pM != PAINT) {
-                        paintMatrix[row][col] = STRIKE;
-                    }
-                }
-            }
-        }
-        numberMatrix2[cRow][cCol] = numberMatrix[cRow][cCol];
-        numberMatrix[cRow][cCol] = STRIKE;
-    }
-
-    private boolean isInsideMatrix(int col, int row) {
-        return (row >= 0 && row < numberMatrix.length) && (col >= 0 && col < numberMatrix[row].length);
     }
 
     private void doMagic(int cCol, int cRow) {
@@ -209,6 +179,22 @@ public class Calculator {
         }
     }
 
+    private void strikeSurround(int cCol, int cRow) {
+        for (int row = cRow - 1; row < cRow + 2; row++) {
+            for (int col = cCol - 1; col < cCol + 2; col++) {
+                if (isInsideMatrix(col, row)) {
+                    char nM = numberMatrix[row][col];
+                    char pM = paintMatrix[row][col];
+                    if ((nM == FILL || Character.isDigit(nM)) && pM != PAINT) {
+                        paintMatrix[row][col] = STRIKE;
+                    }
+                }
+            }
+        }
+        numberMatrix2[cRow][cCol] = numberMatrix[cRow][cCol];
+        numberMatrix[cRow][cCol] = STRIKE;
+    }
+
     /**
      * @return 0:[fill/number count], 1:[paint count]
      */
@@ -229,5 +215,9 @@ public class Calculator {
             }
         }
         return count;
+    }
+
+    private boolean isInsideMatrix(int col, int row) {
+        return (row >= 0 && row < numberMatrix.length) && (col >= 0 && col < numberMatrix[row].length);
     }
 }
